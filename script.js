@@ -88,20 +88,27 @@ const totalCards = carouselCards.length;
 
 function updateCarousel() {
     carouselCards.forEach((card, index) => {
-        // Calculate position relative to current index
-        let position = index - currentIndex;
+        // Calculate position relative to current index (circular)
+        let diff = index - currentIndex;
 
-        if (position === 0) {
+        // Wrap around for circular effect
+        if (diff > totalCards / 2) diff -= totalCards;
+        if (diff < -totalCards / 2) diff += totalCards;
+
+        if (diff === 0) {
             // Current card - front and center
             card.setAttribute('data-position', '0');
-        } else if (position > 0 && position <= 3) {
-            // Cards waiting on the right
-            card.setAttribute('data-position', position.toString());
-        } else if (position < 0 && position >= -1) {
-            // Most recently viewed card - on the left
+        } else if (diff === 1 || (diff === -(totalCards - 1))) {
+            // Next card (to the right)
+            card.setAttribute('data-position', '1');
+        } else if (diff === 2 || (diff === -(totalCards - 2))) {
+            // Two ahead (further right)
+            card.setAttribute('data-position', '2');
+        } else if (diff === -1 || (diff === (totalCards - 1))) {
+            // Previous card (to the left)
             card.setAttribute('data-position', 'viewed');
         } else {
-            // All other cards hidden
+            // All other cards hidden at the back
             card.setAttribute('data-position', 'hidden');
         }
     });

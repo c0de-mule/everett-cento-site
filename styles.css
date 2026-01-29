@@ -573,10 +573,11 @@ ul {
 
 .carousel-stack {
     position: relative;
-    height: 420px;
+    height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1200px;
 }
 
 .project-card {
@@ -588,7 +589,7 @@ ul {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
     /* Folder tab aesthetic */
-    border-radius: 0 12px 12px 12px;
+    border-radius: 12px;
     overflow: visible;
     display: flex;
     flex-direction: column;
@@ -621,7 +622,7 @@ ul {
     content: '';
     position: absolute;
     top: -28px;
-    left: 0;
+    left: 20px;
     width: 140px;
     height: 28px;
     background: var(--bg-card);
@@ -637,7 +638,7 @@ ul {
     content: '';
     position: absolute;
     top: -1px;
-    left: 1px;
+    left: 21px;
     width: 138px;
     height: 4px;
     background: var(--bg-card);
@@ -645,43 +646,46 @@ ul {
 }
 
 
-/* Current card - front and center */
+/* Radial carousel - Ferris wheel viewed from above */
+/* Front card - center and fully visible */
 .project-card[data-position="0"] {
     z-index: 10;
-    transform: translateX(0) scale(1);
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
     opacity: 1;
 }
 
-/* Cards waiting on the left (upcoming) */
+/* Card rotating to the right (next) */
 .project-card[data-position="1"] {
-    z-index: 3;
-    transform: translateX(-80px) scale(0.92);
-    opacity: 0.4;
+    z-index: 5;
+    transform: translateX(280px) translateZ(-180px) rotateY(-25deg) scale(0.85);
+    opacity: 0.6;
 }
 
+/* Card further right (2 positions ahead) */
 .project-card[data-position="2"] {
     z-index: 2;
-    transform: translateX(-110px) scale(0.85);
-    opacity: 0.2;
+    transform: translateX(380px) translateZ(-350px) rotateY(-45deg) scale(0.7);
+    opacity: 0.3;
 }
 
+/* Card at the back */
 .project-card[data-position="3"] {
     z-index: 1;
-    transform: translateX(-130px) scale(0.78);
-    opacity: 0.1;
+    transform: translateX(300px) translateZ(-450px) rotateY(-60deg) scale(0.6);
+    opacity: 0.15;
 }
 
-/* Cards that have been viewed (on the right) */
+/* Card rotating from the left (previous/viewed) */
 .project-card[data-position="viewed"] {
-    z-index: 0;
-    transform: translateX(120px) scale(0.85);
-    opacity: 0.15;
+    z-index: 5;
+    transform: translateX(-280px) translateZ(-180px) rotateY(25deg) scale(0.85);
+    opacity: 0.6;
 }
 
 /* Hidden cards */
 .project-card[data-position="hidden"] {
     z-index: 0;
-    transform: translateX(-150px) scale(0.7);
+    transform: translateX(-300px) translateZ(-450px) rotateY(60deg) scale(0.6);
     opacity: 0;
     pointer-events: none;
 }
@@ -934,24 +938,26 @@ ul {
     }
 
     .carousel-stack {
-        height: 400px;
+        height: 420px;
+        perspective: 1000px;
     }
 
     .project-card {
-        width: 420px;
+        width: 400px;
         height: 320px;
     }
 
     .project-card[data-position="1"] {
-        transform: translateX(-60px) scale(0.92);
+        transform: translateX(220px) translateZ(-150px) rotateY(-20deg) scale(0.8);
     }
 
     .project-card[data-position="2"] {
-        transform: translateX(-85px) scale(0.85);
+        transform: translateX(300px) translateZ(-280px) rotateY(-35deg) scale(0.65);
+        opacity: 0.25;
     }
 
     .project-card[data-position="viewed"] {
-        transform: translateX(90px) scale(0.85);
+        transform: translateX(-220px) translateZ(-150px) rotateY(20deg) scale(0.8);
     }
 
     .contact-grid {
@@ -1015,10 +1021,11 @@ ul {
 
     .carousel-stack {
         height: 380px;
+        perspective: 800px;
     }
 
     .project-card {
-        width: 340px;
+        width: 320px;
         height: 300px;
     }
 
@@ -1030,21 +1037,21 @@ ul {
         font-size: 1.35rem;
     }
 
+    /* Simplified radial for tablet - less dramatic */
     .project-card[data-position="1"] {
-        transform: translateX(-50px) scale(0.9);
+        transform: translateX(180px) translateZ(-120px) rotateY(-15deg) scale(0.75);
+        opacity: 0.5;
     }
 
-    .project-card[data-position="2"] {
-        transform: translateX(-70px) scale(0.82);
-        opacity: 0.15;
-    }
-
+    .project-card[data-position="2"],
     .project-card[data-position="3"] {
-        opacity: 0;
+        transform: translateX(220px) translateZ(-200px) rotateY(-25deg) scale(0.6);
+        opacity: 0.2;
     }
 
     .project-card[data-position="viewed"] {
-        transform: translateX(70px) scale(0.82);
+        transform: translateX(-180px) translateZ(-120px) rotateY(15deg) scale(0.75);
+        opacity: 0.5;
     }
 }
 
