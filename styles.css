@@ -374,16 +374,23 @@ ul {
     background: var(--bg-tertiary);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    transition: all var(--transition-medium);
-}
-
-.stat:hover {
-    border-color: var(--accent-primary);
-    transform: translateX(8px);
 }
 
 .stat-icon {
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.stat-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: white;
 }
 
 .stat-label {
@@ -410,23 +417,60 @@ ul {
     background: var(--bg-card);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
 }
 
-.service-icon {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* Colored accent bar at top of each card */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-primary);
 }
+
+.service-automation::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+.service-video::before { background: linear-gradient(90deg, #ec4899, #f472b6); }
+.service-podcast::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.service-training::before { background: linear-gradient(90deg, #10b981, #34d399); }
+.service-social::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+.service-design::before { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: var(--radius-sm);
+}
+
+.service-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.service-automation .service-icon { color: #a78bfa; }
+.service-video .service-icon { color: #f472b6; }
+.service-podcast .service-icon { color: #fbbf24; }
+.service-training .service-icon { color: #34d399; }
+.service-social .service-icon { color: #60a5fa; }
+.service-design .service-icon { color: #f87171; }
 
 .service-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 12px;
 }
 
 .service-card p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.7;
 }
 
@@ -442,6 +486,11 @@ ul {
 
 .projects .section-title {
     margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.subtitle-highlight {
+    text-transform: capitalize;
 }
 
 .projects .section-subtitle {
@@ -664,7 +713,20 @@ ul {
 }
 
 .contact-icon {
-    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--accent-primary);
 }
 
 .contact-text {
