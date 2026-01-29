@@ -126,11 +126,18 @@ function prevSlide() {
 if (carouselCards.length > 0) {
     updateCarousel();
 
-    // Click on card to cycle to next
+    // Click on card to cycle to next with pulse animation
     carouselCards.forEach((card) => {
         card.addEventListener('click', (e) => {
             // Don't cycle if clicking a link inside the card
             if (e.target.tagName === 'A') return;
+
+            // Add pulse animation
+            card.classList.add('clicked');
+            setTimeout(() => {
+                card.classList.remove('clicked');
+            }, 400);
+
             nextSlide();
         });
     });

@@ -15,10 +15,16 @@
 
     --accent-primary: #8b5cf6;
     --accent-secondary: #a78bfa;
-    --accent-glow: rgba(139, 92, 246, 0.3);
+    --accent-glow: rgba(139, 92, 246, 0.4);
+    --accent-glow-strong: rgba(139, 92, 246, 0.6);
 
     --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
     --gradient-subtle: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+    --gradient-footer: linear-gradient(180deg, var(--bg-primary) 0%, rgba(139, 92, 246, 0.15) 100%);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(139, 92, 246, 0.08);
+    --glass-border: rgba(139, 92, 246, 0.2);
 
     --border-color: rgba(255, 255, 255, 0.08);
     --border-hover: rgba(255, 255, 255, 0.15);
@@ -406,19 +412,58 @@ ul {
     padding: var(--section-padding);
 }
 
+/* Bento Grid Layout */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+/* Bento card sizing */
+.service-card.service-automation {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.service-card.service-video {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.service-card.service-podcast {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.service-card.service-training {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.service-card.service-social {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.service-card.service-design {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 .service-card {
-    padding: 32px;
+    padding: 28px;
     background: var(--bg-card);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    transition: all var(--transition-medium);
+}
+
+.service-card:hover {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 30px var(--accent-glow);
 }
 
 /* Colored accent bar at top of each card */
@@ -445,7 +490,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-radius: var(--radius-sm);
 }
 
@@ -463,15 +508,15 @@ ul {
 
 .service-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .service-card p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.85rem;
+    line-height: 1.65;
 }
 
 /* ==========================================
@@ -517,13 +562,33 @@ ul {
     height: 360px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
     /* Folder tab aesthetic */
     border-radius: 0 12px 12px 12px;
     overflow: visible;
     display: flex;
     flex-direction: column;
+}
+
+/* Hover state with glassmorphism and purple glow */
+.project-card[data-position="0"]:hover {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-color: var(--glass-border);
+    box-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
+}
+
+/* Click pulse animation */
+.project-card.clicked {
+    animation: cardPulse 0.4s ease-out;
+}
+
+@keyframes cardPulse {
+    0% { box-shadow: 0 0 0 0 var(--accent-glow-strong); }
+    50% { box-shadow: 0 0 60px 20px var(--accent-glow); }
+    100% { box-shadow: 0 0 40px var(--accent-glow); }
 }
 
 /* Folder tab */
@@ -538,6 +603,12 @@ ul {
     border: 1px solid var(--border-color);
     border-bottom: none;
     border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+}
+
+.project-card[data-position="0"]:hover::before {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
 }
 
 /* Cover the seam between tab and card */
@@ -549,6 +620,11 @@ ul {
     width: 141px;
     height: 2px;
     background: var(--bg-card);
+    transition: all 0.3s ease;
+}
+
+.project-card[data-position="0"]:hover::after {
+    background: var(--glass-bg);
 }
 
 /* Current card - front and center */
@@ -633,6 +709,31 @@ ul {
 }
 
 .project-link:hover {
+    color: var(--accent-secondary);
+}
+
+/* Project Result Metrics */
+.project-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.result-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.result-value {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--accent-secondary);
 }
 
@@ -752,7 +853,8 @@ ul {
    ========================================== */
 
 .footer {
-    padding: 40px 0;
+    padding: 60px 0 40px;
+    background: var(--gradient-footer);
     border-top: 1px solid var(--border-color);
     text-align: center;
 }
