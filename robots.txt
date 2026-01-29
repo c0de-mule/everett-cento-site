@@ -1,0 +1,6 @@
+# robots.txt for everettcento.com
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://everettcento.com/sitemap.xml
