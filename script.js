@@ -75,3 +75,76 @@ const copyrightYear = document.getElementById('copyright-year');
 if (copyrightYear) {
     copyrightYear.textContent = new Date().getFullYear();
 }
+
+// ==========================================
+// Projects Carousel - Horizontal folder stack
+// ==========================================
+
+const carouselCards = document.querySelectorAll('.carousel-stack .project-card');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+
+let currentIndex = 0;
+const totalCards = carouselCards.length;
+
+function updateCarousel() {
+    carouselCards.forEach((card, index) => {
+        // Calculate position relative to current index
+        let position = index - currentIndex;
+
+        if (position === 0) {
+            // Current card - front and center
+            card.setAttribute('data-position', '0');
+        } else if (position > 0 && position <= 3) {
+            // Cards waiting on the right
+            card.setAttribute('data-position', position.toString());
+        } else if (position < 0 && position >= -1) {
+            // Most recently viewed card - on the left
+            card.setAttribute('data-position', 'viewed');
+        } else {
+            // All other cards hidden
+            card.setAttribute('data-position', 'hidden');
+        }
+    });
+
+    // Update dots
+    carouselDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updateCarousel();
+}
+
+// Initialize carousel
+if (carouselCards.length > 0) {
+    updateCarousel();
+
+    // Click on card to cycle to next
+    carouselCards.forEach((card) => {
+        card.addEventListener('click', (e) => {
+            // Don't cycle if clicking a link inside the card
+            if (e.target.tagName === 'A') return;
+            nextSlide();
+        });
+    });
+
+    carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+}
