@@ -133,7 +133,7 @@ function prevSlide() {
 if (carouselCards.length > 0) {
     updateCarousel();
 
-    // Click on card to cycle to next with pulse animation
+    // Click on card - direction depends on which side of screen you click
     carouselCards.forEach((card) => {
         card.addEventListener('click', (e) => {
             // Don't cycle if clicking a link inside the card
@@ -145,7 +145,13 @@ if (carouselCards.length > 0) {
                 card.classList.remove('clicked');
             }, 400);
 
-            nextSlide();
+            // Determine direction based on click position relative to screen center
+            const screenCenter = window.innerWidth / 2;
+            if (e.clientX < screenCenter) {
+                prevSlide(); // Click on left side - rotate left
+            } else {
+                nextSlide(); // Click on right side - rotate right
+            }
         });
     });
 
