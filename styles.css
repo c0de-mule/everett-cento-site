@@ -1044,43 +1044,28 @@ ul {
         --section-padding: 60px 0;
     }
 
+    /* Hide all nav links except CTA on mobile */
     .nav-menu {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--bg-primary);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 40px;
         gap: 0;
-        transform: translateX(100%);
-        transition: transform var(--transition-medium);
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
     }
 
     .nav-menu li {
-        width: 100%;
+        display: none;
     }
 
-    .nav-menu a {
+    /* Only show the Let's Talk CTA */
+    .nav-menu li:last-child {
         display: block;
-        padding: 20px var(--container-padding);
-        font-size: 1.25rem;
-        border-bottom: 1px solid var(--border-color);
     }
 
     .nav-cta {
-        margin: 20px var(--container-padding);
-        text-align: center;
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 
+    /* Hide hamburger toggle - not needed anymore */
     .nav-toggle {
-        display: flex;
+        display: none;
     }
 
     .hero {
