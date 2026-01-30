@@ -892,14 +892,13 @@ ul {
    ========================================== */
 
 /*
-   Card scaling: Use a single scale factor based on viewport.
+   Card scaling: Fixed aspect ratio, scales with viewport.
    At 1200px+ viewport = full size (500px x 360px)
    Scales down proportionally, minimum 280px wide
 */
 .project-card {
-    --card-scale: clamp(0.56, calc(0.42 * 1vw / 1px + 0.1), 1);
-    width: calc(500px * var(--card-scale));
-    height: calc(360px * var(--card-scale));
+    width: clamp(280px, 42vw, 500px);
+    height: clamp(202px, 30.24vw, 360px);
     /* Use container query for internal scaling */
     container-type: inline-size;
 }
