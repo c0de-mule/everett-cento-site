@@ -895,16 +895,17 @@ ul {
    Card scaling: Fixed aspect ratio, scales with viewport.
    At 1200px+ viewport = full size (500px x 360px)
    Scales down proportionally, minimum 280px wide
+   Height uses same vw multiplier as width to maintain ratio
 */
 .project-card {
     width: clamp(280px, 42vw, 500px);
-    height: clamp(202px, 30.24vw, 360px);
+    height: clamp(200px, 30vw, 360px);
     /* Use container query for internal scaling */
     container-type: inline-size;
 }
 
 .carousel-stack {
-    height: clamp(340px, 40vw, 480px);
+    height: clamp(300px, 38vw, 480px);
 }
 
 /* Fluid carousel positioning - scales with viewport */
@@ -930,42 +931,42 @@ ul {
 
 /* Fluid project content - scales with container (card) width using cqi units */
 .project-content {
-    padding: clamp(16px, 8cqi, 44px);
+    padding: clamp(14px, 7cqi, 40px);
 }
 
 .project-tag {
-    font-size: clamp(0.65rem, 3.5cqi, 0.85rem);
-    padding: clamp(4px, 1.2cqi, 6px) clamp(8px, 2.8cqi, 14px);
-    margin-bottom: clamp(10px, 4cqi, 20px);
+    font-size: clamp(0.6rem, 2.8cqi, 0.85rem);
+    padding: clamp(3px, 1cqi, 6px) clamp(6px, 2.2cqi, 14px);
+    margin-bottom: clamp(6px, 3cqi, 20px);
 }
 
 .project-content h3 {
-    font-size: clamp(0.95rem, 6.5cqi, 1.6rem);
-    margin-bottom: clamp(8px, 3.2cqi, 16px);
+    font-size: clamp(0.85rem, 5cqi, 1.6rem);
+    margin-bottom: clamp(4px, 2cqi, 16px);
 }
 
 .project-content p {
-    font-size: clamp(0.75rem, 4.2cqi, 1.05rem);
-    line-height: 1.5;
+    font-size: clamp(0.65rem, 3.2cqi, 1.05rem);
+    line-height: 1.4;
 }
 
 .project-link {
-    font-size: clamp(0.75rem, 4cqi, 1rem);
-    margin-top: clamp(10px, 4cqi, 20px);
+    font-size: clamp(0.65rem, 3cqi, 1rem);
+    margin-top: clamp(6px, 3cqi, 20px);
 }
 
 .project-result {
-    margin-top: clamp(8px, 3.2cqi, 16px);
-    padding-top: clamp(8px, 3.2cqi, 16px);
-    gap: clamp(6px, 2.4cqi, 12px);
+    margin-top: clamp(6px, 2.5cqi, 16px);
+    padding-top: clamp(6px, 2.5cqi, 16px);
+    gap: clamp(4px, 2cqi, 12px);
 }
 
 .result-label {
-    font-size: clamp(0.55rem, 3cqi, 0.75rem);
+    font-size: clamp(0.5rem, 2.2cqi, 0.75rem);
 }
 
 .result-value {
-    font-size: clamp(0.7rem, 4cqi, 1rem);
+    font-size: clamp(0.6rem, 3cqi, 1rem);
 }
 
 /* Medium screens - maintain 2-column layouts */
