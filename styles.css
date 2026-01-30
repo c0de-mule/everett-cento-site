@@ -583,7 +583,6 @@ ul {
 
 .project-card {
     position: absolute;
-    /* Base size - will be overridden by responsive section */
     width: 500px;
     height: 360px;
     background: var(--bg-card);
@@ -592,7 +591,7 @@ ul {
     cursor: pointer;
     /* Folder tab aesthetic */
     border-radius: 12px;
-    overflow: hidden; /* Prevent content from escaping */
+    overflow: visible;
     display: flex;
     flex-direction: column;
 }
@@ -619,13 +618,13 @@ ul {
     100% { box-shadow: 0 0 40px var(--accent-glow); }
 }
 
-/* Folder tab - scales with card using em (inherits card's font-size) */
+/* Folder tab - scales with card */
 .project-card::before {
     content: '';
     position: absolute;
     top: -28px;
-    left: 1.1em;
-    width: 7em;
+    left: 20px;
+    width: clamp(80px, 28cqi, 140px);
     height: 28px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -640,8 +639,8 @@ ul {
     content: '';
     position: absolute;
     top: -1px;
-    left: calc(1.1em + 1px);
-    width: calc(7em - 2px);
+    left: 21px;
+    width: clamp(78px, 27.6cqi, 138px);
     height: 4px;
     background: var(--bg-card);
     z-index: 5;
@@ -693,53 +692,43 @@ ul {
 }
 
 .project-content {
-    /* Padding scales with card width (8% of card width) */
-    padding: 8%;
+    padding: 40px 44px 44px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 0; /* Allow flex children to shrink */
-    overflow: hidden; /* Prevent overflow */
 }
 
 .project-tag {
     display: inline-block;
-    padding: 0.4em 0.9em;
+    padding: 6px 14px;
     background: var(--bg-tertiary);
     border-radius: var(--radius-full);
-    font-size: 0.85em; /* Relative to parent */
+    font-size: 0.85rem;
     color: var(--accent-secondary);
-    margin-bottom: 0.8em;
+    margin-bottom: 20px;
     width: fit-content;
-    flex-shrink: 0;
 }
 
 .project-content h3 {
     font-family: var(--font-heading);
-    font-size: 1.4em; /* Relative to parent */
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-    flex-shrink: 0;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
 }
 
 .project-content p {
     color: var(--text-secondary);
-    font-size: 0.9em; /* Relative to parent */
-    line-height: 1.5;
+    font-size: 1.05rem;
+    line-height: 1.7;
     flex: 1;
-    min-height: 0;
-    overflow: hidden;
 }
 
 .project-link {
     display: inline-block;
-    margin-top: auto;
-    padding-top: 0.5em;
+    margin-top: 20px;
     color: var(--accent-primary);
     font-weight: 500;
-    font-size: 0.85em;
+    font-size: 1rem;
     transition: color var(--transition-fast);
-    flex-shrink: 0;
 }
 
 .project-link:hover {
@@ -750,15 +739,14 @@ ul {
 .project-result {
     display: flex;
     align-items: center;
-    gap: 0.6em;
-    margin-top: auto;
-    padding-top: 0.6em;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
     border-top: 1px solid var(--border-color);
-    flex-shrink: 0;
 }
 
 .result-label {
-    font-size: 0.65em;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-muted);
@@ -767,7 +755,7 @@ ul {
 
 .result-value {
     font-family: var(--font-heading);
-    font-size: 0.85em;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--accent-secondary);
 }
@@ -904,39 +892,80 @@ ul {
    ========================================== */
 
 /*
-   Card scaling: Fixed aspect ratio (500:360 = 1.39:1), scales with viewport.
-   Font size on card scales proportionally, all child em units follow.
+   Card scaling: Fixed aspect ratio, scales with viewport.
+   At 1200px+ viewport = full size (500px x 360px)
+   Scales down proportionally, minimum 280px wide
 */
 .project-card {
-    width: clamp(260px, 38vw, 500px);
-    height: clamp(187px, 27.4vw, 360px);
-    /* Scale font-size with card width - this cascades to all em units inside */
-    font-size: clamp(12px, 1.9vw, 18px);
+    width: clamp(280px, 42vw, 500px);
+    height: clamp(202px, 30.24vw, 360px);
+    /* Use container query for internal scaling */
+    container-type: inline-size;
 }
 
 .carousel-stack {
-    height: clamp(280px, 36vw, 480px);
+    height: clamp(340px, 40vw, 480px);
 }
 
 /* Fluid carousel positioning - scales with viewport */
 .project-card[data-position="1"] {
-    transform: translateX(clamp(120px, 20vw, 280px)) translateZ(clamp(-80px, -12vw, -180px)) rotateY(-25deg) scale(0.85);
+    transform: translateX(clamp(140px, 24vw, 280px)) translateZ(clamp(-100px, -15vw, -180px)) rotateY(-25deg) scale(0.85);
 }
 
 .project-card[data-position="2"] {
-    transform: translateX(clamp(160px, 28vw, 380px)) translateZ(clamp(-150px, -24vw, -350px)) rotateY(-45deg) scale(0.7);
+    transform: translateX(clamp(180px, 32vw, 380px)) translateZ(clamp(-180px, -30vw, -350px)) rotateY(-45deg) scale(0.7);
 }
 
 .project-card[data-position="3"] {
-    transform: translateX(clamp(130px, 22vw, 300px)) translateZ(clamp(-180px, -30vw, -450px)) rotateY(-60deg) scale(0.6);
+    transform: translateX(clamp(150px, 26vw, 300px)) translateZ(clamp(-220px, -38vw, -450px)) rotateY(-60deg) scale(0.6);
 }
 
 .project-card[data-position="viewed"] {
-    transform: translateX(clamp(-280px, -20vw, -120px)) translateZ(clamp(-180px, -12vw, -80px)) rotateY(25deg) scale(0.85);
+    transform: translateX(clamp(-280px, -24vw, -140px)) translateZ(clamp(-180px, -15vw, -100px)) rotateY(25deg) scale(0.85);
 }
 
 .project-card[data-position="hidden"] {
-    transform: translateX(clamp(-300px, -22vw, -130px)) translateZ(clamp(-450px, -30vw, -180px)) rotateY(60deg) scale(0.6);
+    transform: translateX(clamp(-300px, -26vw, -150px)) translateZ(clamp(-450px, -38vw, -220px)) rotateY(60deg) scale(0.6);
+}
+
+/* Fluid project content - scales with container (card) width using cqi units */
+.project-content {
+    padding: clamp(16px, 8cqi, 44px);
+}
+
+.project-tag {
+    font-size: clamp(0.65rem, 3.5cqi, 0.85rem);
+    padding: clamp(4px, 1.2cqi, 6px) clamp(8px, 2.8cqi, 14px);
+    margin-bottom: clamp(10px, 4cqi, 20px);
+}
+
+.project-content h3 {
+    font-size: clamp(0.95rem, 6.5cqi, 1.6rem);
+    margin-bottom: clamp(8px, 3.2cqi, 16px);
+}
+
+.project-content p {
+    font-size: clamp(0.75rem, 4.2cqi, 1.05rem);
+    line-height: 1.5;
+}
+
+.project-link {
+    font-size: clamp(0.75rem, 4cqi, 1rem);
+    margin-top: clamp(10px, 4cqi, 20px);
+}
+
+.project-result {
+    margin-top: clamp(8px, 3.2cqi, 16px);
+    padding-top: clamp(8px, 3.2cqi, 16px);
+    gap: clamp(6px, 2.4cqi, 12px);
+}
+
+.result-label {
+    font-size: clamp(0.55rem, 3cqi, 0.75rem);
+}
+
+.result-value {
+    font-size: clamp(0.7rem, 4cqi, 1rem);
 }
 
 /* Medium screens - maintain 2-column layouts */
