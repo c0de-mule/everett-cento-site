@@ -922,17 +922,44 @@ ul {
     transform: translateX(clamp(-300px, -26vw, -150px)) translateZ(clamp(-450px, -38vw, -220px)) rotateY(60deg) scale(0.6);
 }
 
-/* Fluid project content padding */
+/* Fluid project content - all text scales with card size */
 .project-content {
-    padding: clamp(24px, 3.5vw, 44px);
+    padding: clamp(20px, 4vw, 44px);
+}
+
+.project-tag {
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+    padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.4vw, 14px);
+    margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .project-content h3 {
-    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+    font-size: clamp(1rem, 3.2vw, 1.6rem);
+    margin-bottom: clamp(10px, 1.6vw, 16px);
 }
 
 .project-content p {
-    font-size: clamp(0.9rem, 0.95vw, 1.05rem);
+    font-size: clamp(0.8rem, 2.1vw, 1.05rem);
+    line-height: 1.5;
+}
+
+.project-link {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-top: clamp(12px, 2vw, 20px);
+}
+
+.project-result {
+    margin-top: clamp(10px, 1.6vw, 16px);
+    padding-top: clamp(10px, 1.6vw, 16px);
+    gap: clamp(8px, 1.2vw, 12px);
+}
+
+.result-label {
+    font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+}
+
+.result-value {
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 /* Medium screens - maintain 2-column layouts */
