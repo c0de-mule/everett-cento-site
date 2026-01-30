@@ -964,7 +964,7 @@ ul {
 
 /* Fluid project content - scales with container (card) width using cqi units */
 .project-content {
-    padding: clamp(14px, 7cqi, 40px);
+    padding: clamp(20px, 7cqi, 40px);
 }
 
 .project-tag {
