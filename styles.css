@@ -752,12 +752,12 @@ ul {
     color: var(--text-secondary);
     font-size: 1.05rem;
     line-height: 1.7;
-    flex: 1;
 }
 
 .project-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 12px;
+    margin-bottom: 4px;
     color: var(--accent-primary);
     font-weight: 500;
     font-size: 1rem;
@@ -773,7 +773,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 16px;
+    margin-top: auto;
     padding-top: 16px;
     border-top: 1px solid var(--border-color);
 }
@@ -985,11 +985,12 @@ ul {
 
 .project-link {
     font-size: clamp(0.65rem, 3cqi, 1rem);
-    margin-top: clamp(6px, 3cqi, 20px);
+    margin-top: clamp(4px, 2cqi, 12px);
+    margin-bottom: clamp(2px, 1cqi, 4px);
 }
 
 .project-result {
-    margin-top: clamp(6px, 2.5cqi, 16px);
+    /* margin-top: auto is set in base styles to push to bottom */
     padding-top: clamp(6px, 2.5cqi, 16px);
     gap: clamp(4px, 2cqi, 12px);
 }
