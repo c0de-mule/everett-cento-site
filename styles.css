@@ -193,12 +193,17 @@ h1, h2, h3 {
 .nav-links a {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    transition: color var(--transition);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+    transition: color var(--transition), background var(--transition);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    background: rgba(253, 251, 247, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .nav-links a:hover {
     color: var(--text-primary);
+    background: rgba(253, 251, 247, 0.9);
 }
 
 .nav-cta {
@@ -208,7 +213,10 @@ h1, h2, h3 {
     letter-spacing: 0.1em;
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--text-primary);
-    transition: all var(--transition);
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .nav-links .nav-cta {
@@ -232,7 +240,6 @@ h1, h2, h3 {
     position: relative;
 }
 
-
 .hero-split {
     display: block;
     min-height: 100vh;
@@ -253,9 +260,6 @@ h1, h2, h3 {
     box-sizing: border-box;
 }
 
-.hero-label {
-    margin-bottom: var(--space-lg);
-}
 
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -353,27 +357,6 @@ h1, h2, h3 {
     margin-bottom: var(--space-lg);
 }
 
-.credentials {
-    display: flex;
-    gap: var(--space-xl);
-    margin-top: var(--space-xl);
-    padding-top: var(--space-xl);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.credential {
-    flex: 1;
-}
-
-.credential-label {
-    display: block;
-    margin-bottom: var(--space-sm);
-}
-
-.credential-value {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-}
 
 /* ==========================================
    Work
@@ -801,11 +784,6 @@ button:focus-visible {
 
     .about-text {
         columns: 1;
-    }
-
-    .credentials {
-        flex-direction: column;
-        gap: var(--space-lg);
     }
 
     .service-item {
