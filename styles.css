@@ -519,6 +519,9 @@ h1, h2, h3 {
     padding: var(--space-xl) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     align-items: start;
+}
+
+.service-item.is-visible {
     transition: transform var(--transition);
 }
 
