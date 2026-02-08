@@ -519,11 +519,11 @@ h1, h2, h3 {
     padding: var(--space-xl) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     align-items: start;
-    transition: padding var(--transition);
+    transition: transform var(--transition);
 }
 
 .service-item:hover {
-    padding-left: var(--space-md);
+    transform: translateX(var(--space-md));
 }
 
 .service-item h3 {
