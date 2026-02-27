@@ -823,7 +823,7 @@ button:focus-visible {
     .hero {
         padding-top: 100px;
         min-height: auto;
-        padding-bottom: var(--space-xl);
+        padding-bottom: 0;
     }
 
     .hero h1 {
