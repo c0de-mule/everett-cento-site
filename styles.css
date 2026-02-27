@@ -771,6 +771,15 @@ button:focus-visible {
         display: none;
     }
 
+    .hero {
+        min-height: auto;
+        margin-bottom: 0;
+    }
+
+    .about {
+        padding-top: var(--space-xl);
+    }
+
     .about-text {
         columns: 1;
     }
