@@ -588,6 +588,16 @@ h1, h2, h3 {
     font-weight: 400 !important;
 }
 
+.offering-price {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted) !important;
+    font-weight: 400 !important;
+    margin-top: var(--space-sm) !important;
+}
+
 /* ==========================================
    Services
    ========================================== */
