@@ -602,19 +602,34 @@ h1, h2, h3 {
     margin-top: var(--space-xl);
     padding-top: var(--space-xl);
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.offerings-custom p {
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
 }
 
-.offerings-custom a {
-    color: var(--accent);
-    border-bottom: 1px solid transparent;
-    transition: border-color var(--transition);
+.offerings-custom-link {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background var(--transition), color var(--transition);
 }
 
-.offerings-custom a:hover {
-    border-color: var(--accent);
+.offerings-custom-link:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
 }
 
 /* ==========================================
@@ -976,6 +991,12 @@ button:focus-visible {
         padding-top: var(--space-lg);
         border-left: none;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .offerings-custom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
     }
 
     .nav-links a:not(.nav-cta) {
