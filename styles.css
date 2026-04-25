@@ -600,8 +600,10 @@ h1, h2, h3 {
 
 .offerings-custom {
     margin-top: var(--space-xl);
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
