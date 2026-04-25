@@ -598,6 +598,23 @@ h1, h2, h3 {
     margin-top: var(--space-sm) !important;
 }
 
+.offerings-custom {
+    margin-top: var(--space-xl);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.offerings-custom a {
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition);
+}
+
+.offerings-custom a:hover {
+    border-color: var(--accent);
+}
+
 /* ==========================================
    Services
    ========================================== */
