@@ -839,7 +839,7 @@ h1, h2, h3 {
 
 /* Hero animates on page load, then JS controls on scroll */
 .hero-content {
-    animation: fadeUp 0.8s ease-out forwards;
+    animation: fadeUp 0.8s ease-out 0.2s both;
     transition: opacity 0.1s ease-out, transform 0.1s ease-out;
     will-change: opacity, transform;
 }
