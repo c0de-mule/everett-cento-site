@@ -598,29 +598,53 @@ h1, h2, h3 {
     margin-top: var(--space-sm) !important;
 }
 
-.offerings-custom {
-    margin-top: var(--space-lg);
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    text-align: center;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+.offering-item-custom {
+    border-left-color: var(--text-muted);
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 3px solid var(--text-muted);
 }
 
-.offerings-custom-link {
-    color: var(--accent);
-    font-weight: 500;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 1px;
+.offering-custom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.offering-custom-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.offering-custom-types li {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.offering-custom-cta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
     white-space: nowrap;
-    transition: color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+    transition: background var(--transition), color var(--transition);
 }
 
-.offerings-custom-link:hover {
-    color: var(--accent-hover);
-    border-color: var(--accent-hover);
+.offering-custom-cta:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
 }
 
 /* ==========================================
@@ -984,9 +1008,10 @@ button:focus-visible {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .offerings-custom {
-        font-size: 0.95rem;
-        text-align: left;
+    .offering-custom-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
     }
 
     .nav-links a:not(.nav-cta) {
