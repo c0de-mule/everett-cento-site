@@ -492,6 +492,11 @@ h1, h2, h3 {
     max-width: 640px;
 }
 
+.workshop-cta {
+    display: inline-block;
+    margin-top: var(--space-lg);
+}
+
 /* ==========================================
    Offerings
    ========================================== */
