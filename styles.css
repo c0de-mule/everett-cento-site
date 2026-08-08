@@ -457,6 +457,91 @@ h1, h2, h3 {
 }
 
 /* ==========================================
+   Work cards - collapsible
+   ========================================== */
+
+.work-item h3,
+.offering-item h3 {
+    transition: color var(--transition);
+}
+
+.work-item:hover h3,
+.offering-item:hover h3 {
+    color: var(--accent);
+}
+
+.work-item .work-item-result {
+    padding-left: 0;
+    padding-top: 0;
+    border-left: none;
+    border-top: none;
+    margin-bottom: var(--space-md);
+}
+
+.work-item-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: none;
+    border: none;
+    padding: var(--space-xs) 0;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    transition: color var(--transition);
+}
+
+.work-item-toggle:hover {
+    color: var(--accent-hover);
+}
+
+.work-item-toggle-icon::before {
+    content: '+';
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.work-item.is-open .work-item-toggle-icon::before {
+    content: '\2013';
+}
+
+.work-item-detail {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.work-item.is-open .work-item-detail {
+    grid-template-rows: 1fr;
+}
+
+.work-item-detail-inner {
+    overflow: hidden;
+}
+
+.work-item-detail .work-item-situation {
+    margin-top: var(--space-md);
+}
+
+.work-item-detail p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.work-item-detail p:last-child {
+    margin-bottom: 0;
+}
+
+.offering-engine-cta {
+    display: inline-block;
+    margin-top: var(--space-lg);
+}
+
+/* ==========================================
    Workshops
    ========================================== */
 
