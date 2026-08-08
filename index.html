@@ -360,25 +360,70 @@
                     <h2 id="faq-heading">Questions people ask before starting</h2>
                 </div>
                 <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>How much does it cost to hire someone to set up AI for a small business?</h3>
-                        <p>It depends on scope. My productized AI Content Engine starts at $2,000 to set up plus $650 a month to run. Custom builds are quoted per project after a short discovery conversation. There is no long enterprise contract and no per-seat software to buy on top.</p>
+                    <div class="faq-item is-open">
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a1">
+                                <span>How much does it cost to hire someone to set up AI for a small business?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a1">
+                            <div class="faq-a-inner">
+                                <p>It depends on scope. My productized AI Content Engine starts at $2,000 to set up plus $650 a month to run. Custom builds are quoted per project after a short discovery conversation. There is no long enterprise contract and no per-seat software to buy on top.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <h3>I'm not technical and don't know where to start. Is my business ready for AI?</h3>
-                        <p>If you keep hearing about AI and feel behind, you are not. Most people I work with felt the same at the start. The first step is a conversation about how you actually work, then picking one or two high-return uses and building those first, rather than a large AI transformation.</p>
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2">
+                                <span>I'm not technical and don't know where to start. Is my business ready for AI?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a2">
+                            <div class="faq-a-inner">
+                                <p>If you keep hearing about AI and feel behind, you are not. Most people I work with felt the same at the start. The first step is a conversation about how you actually work, then picking one or two high-return uses and building those first, rather than a large AI transformation.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <h3>What does a first project look like?</h3>
-                        <p>It starts with discovery: I learn how you operate and find the one or two places AI pays off fastest. Then I build those, connected to the tools you already use. Then handoff: you get something you own and know how to run, not a black box you depend on me for.</p>
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3">
+                                <span>What does a first project look like?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a3">
+                            <div class="faq-a-inner">
+                                <p>It starts with discovery: I learn how you operate and find the one or two places AI pays off fastest. Then I build those, connected to the tools you already use. Then handoff: you get something you own and know how to run, not a black box you depend on me for.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <h3>Will I own what you build?</h3>
-                        <p>Yes. That is the point. I build on tools and accounts you control, and either hand over a system you operate yourself or teach you to build it. The goal is to leave you more capable than I found you, not dependent on me.</p>
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4">
+                                <span>Will I own what you build?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a4">
+                            <div class="faq-a-inner">
+                                <p>Yes. That is the point. I build on tools and accounts you control, and either hand over a system you operate yourself or teach you to build it. The goal is to leave you more capable than I found you, not dependent on me.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <h3>Where are you based, and do you work remotely?</h3>
-                        <p>I'm based in Portland, Oregon and work with businesses across the Pacific Northwest and remotely with clients anywhere in the US.</p>
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5">
+                                <span>Where are you based, and do you work remotely?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a5">
+                            <div class="faq-a-inner">
+                                <p>I'm based in Portland, Oregon and work with businesses across the Pacific Northwest and remotely with clients anywhere in the US.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -511,6 +556,15 @@
                     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
                     const label = btn.querySelector('.work-item-toggle-label');
                     if (label) label.textContent = open ? 'Hide the story' : 'Read the full story';
+                });
+            });
+
+            // Expandable FAQ
+            document.querySelectorAll('.faq-q').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const item = btn.closest('.faq-item');
+                    const open = item.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
                 });
             });
         })();
