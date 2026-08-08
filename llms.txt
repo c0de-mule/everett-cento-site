@@ -1,0 +1,22 @@
+# Everett Cento
+> AI consultant based in Portland, Oregon, building custom AI for small businesses and solopreneurs, one-on-one. Sometimes he builds the system for you, sometimes he teaches you to build it. Either way you own it.
+
+## What he does
+- Custom AI and workflow automation fit to how your business already runs
+- One-on-one, no agency handoffs, no templated build
+- Based in Portland, Oregon; serves the Pacific Northwest and remote clients across the US
+- Building custom AI for small businesses since 2025
+
+## Proof
+- Automated content pipeline: raw podcast episode to five publish-ready assets in about 10 minutes instead of about 3 hours
+- Personal AI assistant that handles research, file lookups, and task creation from one chat
+- Custom dashboards and workflow automations tied to the tools a business already uses
+
+## Offerings
+- AI Content Engine: from $2,000 setup + $650/month
+- Custom builds: quoted per project
+
+## Links
+- Site: https://everettcento.com
+- LinkedIn: https://www.linkedin.com/in/everett-cento/
+- Contact: centoeverett@gmail.com

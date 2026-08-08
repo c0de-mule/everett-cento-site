@@ -899,6 +899,49 @@ h1, h2, h3 {
 }
 
 /* ==========================================
+   FAQ
+   ========================================== */
+
+.faq {
+    padding: var(--space-2xl) 0;
+    background: var(--bg-secondary);
+    position: relative;
+    z-index: 10;
+}
+
+.faq-header {
+    margin-bottom: var(--space-xl);
+}
+
+.faq-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.faq-list {
+    max-width: 760px;
+}
+
+.faq-item {
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--line);
+}
+
+.faq-item:first-child {
+    border-top: none;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ==========================================
    Contact
    ========================================== */
 
