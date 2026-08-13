@@ -12,7 +12,7 @@
 
     --text-primary: #1a1a1a;
     --text-secondary: #5a5a5a;
-    --text-muted: #8a8a8a;
+    --text-muted: #6b6b6b;
     --text-inverse: #FDFBF7;
 
     /* Warm accent - terracotta/rust */
@@ -885,7 +885,7 @@ h1, h2, h3 {
 
 .service-item-content li {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: var(--space-xs) var(--space-sm);
@@ -988,6 +988,7 @@ h1, h2, h3 {
 .faq-a p {
     color: var(--text-secondary);
     line-height: 1.7;
+    padding-top: 12px;
     padding-bottom: var(--space-lg);
 }
 
