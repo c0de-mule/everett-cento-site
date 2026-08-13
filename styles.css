@@ -536,6 +536,18 @@ h1, h2, h3 {
     margin-bottom: 0;
 }
 
+.work-item-summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.work-item-summary p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 .offering-engine-cta {
     display: inline-block;
     margin-top: var(--space-lg);
