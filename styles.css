@@ -287,7 +287,7 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: 50% 8%;
     filter: grayscale(15%);
     transition: filter 0.4s ease;
 }
@@ -1197,6 +1197,7 @@ button:focus-visible {
         right: auto;
         width: 100%;
         height: 60vh;
+        min-height: 360px;
         order: 2;
         opacity: 1 !important; /* Override JS scroll fade on mobile */
         animation: none;
@@ -1204,6 +1205,7 @@ button:focus-visible {
     }
 
     .hero-image img {
+        object-fit: cover;
         object-position: center top;
     }
 
@@ -1213,7 +1215,7 @@ button:focus-visible {
         top: 0;
         left: 0;
         right: 0;
-        height: 80px;
+        height: 16px;
         background: linear-gradient(to bottom,
             var(--bg-primary) 0%,
             rgba(var(--bg-primary-rgb), 0.4) 40%,
