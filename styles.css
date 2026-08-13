@@ -1223,7 +1223,13 @@ button:focus-visible {
     }
 
     .hero-image::after {
-        display: none;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 64px;
+        background: linear-gradient(to top, var(--bg-secondary) 0%, transparent 100%);
     }
 
     .hero {
