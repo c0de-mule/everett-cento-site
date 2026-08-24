@@ -59,17 +59,25 @@
             { "@type": "Country", "name": "United States" }
           ],
           "description": "One-on-one AI setup and custom automation for small businesses and solopreneurs, based in Portland and working across the US and remotely.",
-          "makesOffer": {
-            "@type": "Offer",
-            "name": "The Business Brain",
-            "priceSpecification": { "@type": "PriceSpecification", "price": "1000", "priceCurrency": "USD", "description": "Starting at $1,000, one-time build" }
-          }
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "name": "The Business Brain",
+              "priceSpecification": { "@type": "PriceSpecification", "price": "1000", "priceCurrency": "USD", "description": "$1,000 flat fee, one-time build" }
+            },
+            {
+              "@type": "Offer",
+              "name": "Fractional AI Lead",
+              "description": "Monthly retainer for ongoing AI operations, automation sprints, and custom tool builds"
+            }
+          ]
         },
         {
           "@type": "FAQPage",
           "@id": "https://everettcento.com/#faq",
           "mainEntity": [
-            { "@type": "Question", "name": "How much does it cost to hire someone to set up AI for a small business?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on scope. The Business Brain, my productized offering, starts at $1,000 and is a one-time build. Custom projects are quoted per project after a short discovery conversation. There is no long enterprise contract and no per-seat software to buy on top." } },
+            { "@type": "Question", "name": "How does pricing and project scoping work?", "acceptedAnswer": { "@type": "Answer", "text": "The Business Brain is a flat $1,000 one-time build completed in one week. Fractional AI Lead engagements run as monthly retainers with dedicated automation sprints. Custom standalone projects are quoted as fixed-price bids after a short discovery call. There is no long enterprise contract and no per-seat software to buy on top." } },
+            { "@type": "Question", "name": "Which service is the right fit for my business?", "acceptedAnswer": { "@type": "Answer", "text": "If you want your company voice, FAQs, and daily administrative writing organized into a private AI workspace within one week, start with The Business Brain ($1,000 flat fee). If you have multiple recurring manual handoffs, data pipelines, and internal tools you want automated every month, the Fractional AI Lead retainer provides dedicated ongoing operations support." } },
             { "@type": "Question", "name": "I'm not technical and don't know where to start. Is my business ready for AI?", "acceptedAnswer": { "@type": "Answer", "text": "If you keep hearing about AI and feel behind, you are not. Most people I work with felt the same at the start. The first step is a conversation about how you actually work, then picking one or two high-return uses and building those first, rather than a large AI transformation." } },
             { "@type": "Question", "name": "What does a first project look like?", "acceptedAnswer": { "@type": "Answer", "text": "It starts with discovery: I learn how you operate and find the one or two places AI pays off fastest. Then I build those, connected to the tools you already use. Then handoff: you get something you own and know how to run, not a black box you depend on me for." } },
             { "@type": "Question", "name": "Will I own what you build?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. That is the point. I build on tools and accounts you control, and either hand over a system you operate yourself or teach you to build it. The goal is to leave you more capable than I found you, not dependent on me." } },
@@ -101,8 +109,12 @@
         <section class="hero" aria-labelledby="hero-heading">
             <div class="hero-split">
                 <div class="hero-content">
-                    <h1 id="hero-heading">AI built around <em>your business</em>, not around a template.</h1>
-                    <p class="hero-intro">I work one-on-one with small businesses and solopreneurs, learning how you operate before I build AI that fits.</p>
+                    <h1 id="hero-heading">Custom AI systems built around how your business <em>actually runs</em>.</h1>
+                    <p class="hero-intro">I work one-on-one with small businesses and solopreneurs to eliminate repetitive manual work with private AI systems and automated workflows you own forever.</p>
+                    <div class="hero-actions">
+                        <a href="#offerings" class="hero-cta">Explore Services</a>
+                        <a href="#work" class="hero-secondary-link">See Recent Projects <span aria-hidden="true">&rarr;</span></a>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="everett-cento.png" alt="Everett Cento" width="800" height="1000" loading="eager" fetchpriority="high" />
@@ -134,55 +146,99 @@
                 </div>
 
                 <div class="work-list">
-                    <article class="work-item animate-fade-up">
-                        <div class="work-item-header">
-                            <span class="label">Embedded AI Partner</span>
-                            <span class="label work-item-client">Wellness &amp; Education Brand</span>
+                    <article class="work-row animate-fade-up">
+                        <div class="work-row-meta">
+                            <div class="work-item-header">
+                                <span class="work-index">01 /</span>
+                                <span class="label">Wellness &amp; Education Brand</span>
+                            </div>
+                            <h3>Project Operations Dashboard</h3>
+                            <div class="work-item-outcome">
+                                <span class="work-outcome-tag">Result</span>
+                                <p>Replaced scattered status threads with an automated morning digest, saving leadership ~5 hours of manual chasing every week.</p>
+                            </div>
                         </div>
-                        <h3>Project Operations Dashboard</h3>
-                        <div class="work-item-summary">
-                            <p><strong>Friction:</strong> Executives were finding out about departmental decisions after they'd already happened, and staying current on project status meant chasing down whoever had the update.</p>
-                            <p><strong>Build:</strong> A shared dashboard logging every project and its status, pulling automatically from marketing data and class schedules, with a weekly digest instead of hunting people down.</p>
-                            <p><strong>Result:</strong> Replaced scattered status threads with an automated morning digest, saving leadership ~5 hours of manual chasing every week.</p>
-                        </div>
-                    </article>
-
-                    <article class="work-item animate-fade-up">
-                        <div class="work-item-header">
-                            <span class="label">AI Infrastructure</span>
-                            <span class="label work-item-client">Marketing Agency</span>
-                        </div>
-                        <h3>AI Operations Hub</h3>
-                        <div class="work-item-summary">
-                            <p><strong>Friction:</strong> Recurring work like pulling data and sending client updates kept slipping, because none of it happened unless someone remembered to sit down and run it themselves.</p>
-                            <p><strong>Build:</strong> An always-on system wired into their existing tools that handles that recurring work on its own schedule, without anyone having to trigger it.</p>
-                            <p><strong>Result:</strong> Recurring client reporting and asset syncing now run autonomously before anyone sits down at their desk.</p>
+                        <div class="work-row-body">
+                            <div class="work-story-block">
+                                <span class="work-story-label">Friction</span>
+                                <p>Executives were finding out about departmental decisions after they had already happened, and staying current on project status meant chasing down whoever had the update.</p>
+                            </div>
+                            <div class="work-story-block">
+                                <span class="work-story-label">Build</span>
+                                <p>A shared dashboard logging every project and its status, pulling automatically from marketing data and class schedules, with a weekly digest instead of hunting people down.</p>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="work-item animate-fade-up">
-                        <div class="work-item-header">
-                            <span class="label">Content Pipeline</span>
-                            <span class="label work-item-client">Marketing Agency</span>
+                    <article class="work-row animate-fade-up">
+                        <div class="work-row-meta">
+                            <div class="work-item-header">
+                                <span class="work-index">02 /</span>
+                                <span class="label">Marketing Agency</span>
+                            </div>
+                            <h3>AI Operations Hub</h3>
+                            <div class="work-item-outcome">
+                                <span class="work-outcome-tag">Result</span>
+                                <p>Recurring client reporting and asset syncing now run autonomously before anyone sits down at their desk.</p>
+                            </div>
                         </div>
-                        <h3>Podcast Content Pipeline</h3>
-                        <div class="work-item-summary">
-                            <p><strong>Friction:</strong> Turning raw recordings into platform-ready content was costing hours of manual post-production work per episode.</p>
-                            <p><strong>Build:</strong> An automated pipeline that parses transcripts and generates show notes, descriptions, and captions.</p>
-                            <p><strong>Result:</strong> Full episode packaging (show notes, platform copy, timestamps) dropped from 4+ hours to under 10 minutes per recording.</p>
+                        <div class="work-row-body">
+                            <div class="work-story-block">
+                                <span class="work-story-label">Friction</span>
+                                <p>Recurring work like pulling data and sending client updates kept slipping, because none of it happened unless someone remembered to sit down and run it themselves.</p>
+                            </div>
+                            <div class="work-story-block">
+                                <span class="work-story-label">Build</span>
+                                <p>An always-on system wired into their existing tools that handles that recurring work on its own schedule, without anyone having to trigger it.</p>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="work-item animate-fade-up">
-                        <div class="work-item-header">
-                            <span class="label">Full-Stack Development</span>
-                            <span class="label work-item-client">Marketing Consultant</span>
+                    <article class="work-row animate-fade-up">
+                        <div class="work-row-meta">
+                            <div class="work-item-header">
+                                <span class="work-index">03 /</span>
+                                <span class="label">Marketing Agency</span>
+                            </div>
+                            <h3>Podcast Content Pipeline</h3>
+                            <div class="work-item-outcome">
+                                <span class="work-outcome-tag">Result</span>
+                                <p>Full episode packaging (show notes, platform copy, timestamps) dropped from 4+ hours to under 10 minutes per recording.</p>
+                            </div>
                         </div>
-                        <h3>Marketing Assessment Platform</h3>
-                        <div class="work-item-summary">
-                            <p><strong>Friction:</strong> Vetting and onboarding entry-level prospects was a manual bottleneck, limiting how much high-touch agency work could actually get taken on.</p>
-                            <p><strong>Build:</strong> A custom Next.js application, powered by Claude, that runs prospects through an automated diagnostic and generates a personalized action plan.</p>
-                            <p><strong>Result:</strong> A 24/7 automated lead-qualification engine that delivers custom diagnostic reports with zero manual consultant hours required.</p>
+                        <div class="work-row-body">
+                            <div class="work-story-block">
+                                <span class="work-story-label">Friction</span>
+                                <p>Turning raw recordings into platform-ready content was costing hours of manual post-production work per episode.</p>
+                            </div>
+                            <div class="work-story-block">
+                                <span class="work-story-label">Build</span>
+                                <p>An automated pipeline that parses transcripts and generates show notes, descriptions, and captions.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-row animate-fade-up">
+                        <div class="work-row-meta">
+                            <div class="work-item-header">
+                                <span class="work-index">04 /</span>
+                                <span class="label">Marketing Consultant</span>
+                            </div>
+                            <h3>Marketing Assessment Platform</h3>
+                            <div class="work-item-outcome">
+                                <span class="work-outcome-tag">Result</span>
+                                <p>A 24/7 automated lead-qualification engine that delivers custom diagnostic reports with zero manual consultant hours required.</p>
+                            </div>
+                        </div>
+                        <div class="work-row-body">
+                            <div class="work-story-block">
+                                <span class="work-story-label">Friction</span>
+                                <p>Vetting and onboarding entry-level prospects was a manual bottleneck, limiting how much high-touch agency work could actually get taken on.</p>
+                            </div>
+                            <div class="work-story-block">
+                                <span class="work-story-label">Build</span>
+                                <p>A custom Next.js application, powered by Claude, that runs prospects through an automated diagnostic and generates a personalized action plan.</p>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -212,42 +268,79 @@
                     <h2 id="offerings-heading">Work With Me</h2>
                 </div>
                 <div class="offerings-list">
+                    <!-- 1. The Business Brain -->
                     <div class="offering-item animate-fade-up">
                         <div class="offering-item-header">
                             <span class="label">Productized Service</span>
-                            <span class="label offering-type">One-Time Build</span>
+                            <span class="label offering-type">1-Week Build</span>
                         </div>
                         <h3>The Business Brain</h3>
-                        <p class="offering-description">A workspace that knows your business the way you do, and writes and talks the way you do. Built once, handed off in the tool you already use. Answer a customer email, explain your policy, draft a post, all without starting from a blank page every time.</p>
+                        <p class="offering-description">A private AI system trained on how your business actually runs. It holds your company tone, past work, service catalog, and operational rules in one place so you can answer customer questions, draft proposals, and create content without starting from a blank page.</p>
                         <div class="offering-item-content">
                             <div class="offering-deliverables">
                                 <p class="label">What you get</p>
                                 <ul>
-                                    <li>A short discovery conversation about how your business actually runs.</li>
-                                    <li>A voice and knowledge workspace built around that.</li>
-                                    <li>A walkthrough on making small updates yourself.</li>
+                                    <li>Private Knowledge Vault structured with your docs, FAQs, and brand tone.</li>
+                                    <li>Custom workflows built for your 3 biggest administrative bottlenecks.</li>
+                                    <li>Deployed inside your private tools with zero data shared to public models.</li>
+                                    <li>60-minute handoff walkthrough and recorded operating guides for your team.</li>
                                 </ul>
                             </div>
                             <div class="offering-result">
-                                <span class="label">Result</span>
-                                <p>I built one for myself, it's what's running behind everything I put out. I built one for Eden Method almost two years ago. It's still replying to their customer comments today, about an hour a day across 400,000-plus followers.</p>
-                                <p class="offering-tagline">One time build, yours to keep.</p>
-                                <p class="offering-price">Starting at $1,000</p>
+                                <div>
+                                    <span class="label">Result</span>
+                                    <p>Built for Eden Method nearly two years ago. Still handling customer replies today across 400,000-plus followers.</p>
+                                    <p class="offering-tagline">One-time build. Yours to keep and run.</p>
+                                    <p class="offering-price">$1,000 flat fee</p>
+                                </div>
+                                <a href="#contact" class="offering-custom-cta offering-engine-cta" data-scope="business-brain">Get in touch</a>
                             </div>
                         </div>
-                        <a href="#contact" class="offering-custom-cta offering-engine-cta" data-scope="business-brain">Get in touch</a>
                     </div>
+
+                    <!-- 2. Fractional AI Lead -->
+                    <div class="offering-item animate-fade-up">
+                        <div class="offering-item-header">
+                            <span class="label">Ongoing Engagement</span>
+                            <span class="label offering-type">Monthly Retainer</span>
+                        </div>
+                        <h3>Fractional AI Lead</h3>
+                        <p class="offering-description">Dedicated monthly AI operations, workflow automation, and custom tool builds for businesses that want continuous operational capability without hiring a full-time in-house developer.</p>
+                        <div class="offering-item-content">
+                            <div class="offering-deliverables">
+                                <p class="label">What you get</p>
+                                <ul>
+                                    <li>Monthly automation sprints connecting your CRM, reporting, and client operations.</li>
+                                    <li>Custom internal tools and portals built around your proprietary workflows.</li>
+                                    <li>System maintenance, prompt tuning, and model upgrades as technology shifts.</li>
+                                    <li>Direct asynchronous Slack access for your team's day-to-day AI needs.</li>
+                                </ul>
+                            </div>
+                            <div class="offering-result">
+                                <div>
+                                    <span class="label">Capacity</span>
+                                    <p>Strictly limited to 2 to 3 clients at a time for fast turnaround and high-touch delivery.</p>
+                                    <p class="offering-tagline">Ongoing operations partner.</p>
+                                    <p class="offering-price">Monthly Retainer</p>
+                                </div>
+                                <a href="#contact" class="offering-custom-cta offering-engine-cta" data-scope="retainer">Get in touch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Custom Automations & Tools -->
                     <div class="offering-item offering-item-custom animate-fade-up">
                         <div class="offering-item-header">
-                            <span class="label">Custom Project</span>
+                            <span class="label">Fixed-Scope Build</span>
                         </div>
-                        <h3>Custom Builds</h3>
-                        <p class="offering-description">AI infrastructure, automations, and full-stack applications built to your specific situation. Most wrap in a few weeks, and scope and pricing follow the conversation.</p>
+                        <h3>Custom Automations &amp; Tools</h3>
+                        <p class="offering-description">Standalone infrastructure, custom workflow automations, and full-stack web applications scoped to your specific operational bottleneck. Most projects wrap in two to four weeks.</p>
                         <div class="offering-custom-footer">
                             <ul class="offering-custom-types">
-                                <li>AI Infrastructure</li>
                                 <li>Workflow Automation</li>
-                                <li>Full-Stack Development</li>
+                                <li>Custom Web Tools</li>
+                                <li>Data Pipelines</li>
+                                <li>Client Reporting</li>
                             </ul>
                             <a href="#contact" class="offering-custom-cta" data-scope="workflow">Get in touch</a>
                         </div>
@@ -298,7 +391,7 @@
                                 <li>Progress Updates</li>
                             </ul>
                         </div>
-                        <span class="label">Weeks 2–3</span>
+                        <span class="label">Weeks 2 to 3</span>
                     </div>
                     <div class="service-item animate-fade-up" data-delay="2">
                         <h3>Handoff</h3>
@@ -325,14 +418,27 @@
                 <div class="faq-list">
                     <div class="faq-item is-open">
                         <h3 class="faq-q-heading">
-                            <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a1">
+                            <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a-which">
+                                <span>Which service is the right fit for my business?</span>
+                                <span class="faq-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-a" id="faq-a-which">
+                            <div class="faq-a-inner">
+                                <p>If you want your company voice, FAQs, and daily administrative writing organized into a private AI workspace within one week, start with The Business Brain ($1,000 flat fee). If you have multiple recurring manual handoffs, data pipelines, and internal tools you want automated every month, the Fractional AI Lead retainer provides dedicated ongoing operations support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-q-heading">
+                            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1">
                                 <span>How does pricing and project scoping work?</span>
                                 <span class="faq-icon" aria-hidden="true"></span>
                             </button>
                         </h3>
                         <div class="faq-a" id="faq-a1">
                             <div class="faq-a-inner">
-                                <p>The Business Brain is a flat $1,000 one-time build. Custom projects (automations, custom web tools, and dashboards) are quoted as fixed-price bids after a short discovery call, typically completed in 2 to 4 weeks. You’ll always know the exact deliverables, timeline, and investment before we start, with zero hidden retainers or hourly surprises.</p>
+                                <p>The Business Brain is a flat $1,000 one-time build completed in one week. Fractional AI Lead engagements run as monthly retainers with dedicated automation sprints. Custom standalone projects are quoted as fixed-price bids after a short discovery call, typically completed in two to four weeks. You will always know the exact deliverables, timeline, and investment before we start, with zero hidden retainers or hourly surprises.</p>
                             </div>
                         </div>
                     </div>
@@ -391,13 +497,13 @@
                 </div>
             </div>
         </section>
-        <!-- Contact / Project Scope Form -->
+        <!-- Contact / Reach Out Form -->
         <section class="contact" id="contact" aria-labelledby="contact-heading">
             <div class="container animate-fade-up">
                 <div class="contact-header">
-                    <p class="label">Project Scope</p>
-                    <h2 id="contact-heading">Let's figure out what you need.</h2>
-                    <p class="contact-subhead">Most projects start with a 20-minute conversation. Pick what you're exploring or tell me what's on your mind.</p>
+                    <p class="label">Reach Out</p>
+                    <h2 id="contact-heading">Let's talk about your business.</h2>
+                    <p class="contact-subhead">Tell me what is eating up your team's time, or pick an area you want to explore. I review every note personally and reply within 24 hours to schedule a quick conversation.</p>
                 </div>
 
                 <div class="scope-card">
@@ -410,26 +516,26 @@
                         <!-- FormSubmit config -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_subject" id="form-subject" value="[Project Scope] The Business Brain inquiry">
+                        <input type="hidden" name="_subject" id="form-subject" value="[Inquiry] The Business Brain">
                         <input type="hidden" name="Project Type" id="form-project-type" value="The Business Brain">
 
                         <!-- Chip Selector -->
                         <div class="scope-group">
                             <label class="scope-label" id="scope-chips-label">What are you looking to build or explore?</label>
                             <div class="scope-chips" role="radiogroup" aria-labelledby="scope-chips-label">
-                                <button type="button" role="radio" aria-checked="true" class="scope-chip is-active" data-scope="business-brain" data-prompt="Tell me about your business, the tools you use (e.g. Notion, Docs, Slack), and what repetitive writing or answers you want it to handle..." data-title="The Business Brain">
+                                <button type="button" role="radio" aria-checked="true" class="scope-chip is-active" data-scope="business-brain" data-prompt="Tell me about your business, the tools you use (such as Notion, Docs, or Slack), and what repetitive writing or answers you want your AI brain to handle..." data-title="The Business Brain">
                                     <span class="chip-icon">🧠</span> The Business Brain
                                 </button>
-                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="workflow" data-prompt="Tell me about the repetitive task, manual handoff, or tools you want to connect (e.g. Airtable, Zapier, CRM, email)..." data-title="Workflow Automation">
-                                    <span class="chip-icon">⚡</span> Workflow Automation
+                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="retainer" data-prompt="Tell me about your current operations, the tools you run on, and the recurring manual bottlenecks you want automated every month..." data-title="Fractional AI Lead">
+                                    <span class="chip-icon">⚡</span> Fractional AI Lead
                                 </button>
-                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="web-tool" data-prompt="What kind of web application, portal, or internal dashboard do you need built, and who will be using it..." data-title="Custom Web Tool / App">
-                                    <span class="chip-icon">💻</span> Custom Web Tool / App
+                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="workflow" data-prompt="Tell me about the repetitive task, manual handoff, or tools you want to connect (such as Airtable, Make, CRM, or email)..." data-title="Custom Automations & Tools">
+                                    <span class="chip-icon">🛠️</span> Custom Automations
                                 </button>
-                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="workshop" data-prompt="Tell me about your team or community, your rough timeline, and what you'd like everyone to build together..." data-title="Team Workshop">
+                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="workshop" data-prompt="Tell me about your team or community, your rough timeline, and what you would like everyone to build together..." data-title="Team Workshop">
                                     <span class="chip-icon">👥</span> Team Workshop
                                 </button>
-                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="general" data-prompt="Tell me what's on your mind, where you're feeling friction in your operations, or what you'd like to explore..." data-title="General Project Inquiry">
+                                <button type="button" role="radio" aria-checked="false" class="scope-chip" data-scope="general" data-prompt="Tell me what is on your mind, where you are feeling friction in your operations, or what you would like to explore..." data-title="General Inquiry">
                                     <span class="chip-icon">💬</span> General Inquiry
                                 </button>
                             </div>
@@ -452,14 +558,14 @@
                         <!-- Textarea with dynamic guidance -->
                         <div class="scope-field" id="field-details">
                             <label for="project-details" class="scope-field-label">Project Details <span class="required" aria-hidden="true">*</span></label>
-                            <textarea id="project-details" name="Project Details" class="scope-textarea" rows="4" placeholder="Tell me about your business, the tools you use (e.g. Notion, Docs, Slack), and what repetitive writing or answers you want it to handle..." required></textarea>
-                            <span class="field-error" id="details-error">Please share a brief note about what you're looking for</span>
+                            <textarea id="project-details" name="Project Details" class="scope-textarea" rows="4" placeholder="Tell me about your business, the tools you use (such as Notion, Docs, or Slack), and what repetitive writing or answers you want your AI brain to handle..." required></textarea>
+                            <span class="field-error" id="details-error">Please share a brief note about what you are looking for</span>
                         </div>
 
                         <!-- Form Actions -->
                         <div class="scope-actions">
                             <button type="submit" class="scope-submit-btn" id="scope-submit-btn">
-                                <span class="btn-text">Send Project Scope</span>
+                                <span class="btn-text">Start the Conversation</span>
                                 <span class="btn-arrow" aria-hidden="true">→</span>
                                 <span class="btn-spinner" aria-hidden="true"></span>
                             </button>
@@ -470,8 +576,8 @@
                     <!-- Success State -->
                     <div id="scope-success" class="scope-success" hidden>
                         <div class="success-icon" aria-hidden="true">✓</div>
-                        <h3 class="success-title">Project scope received.</h3>
-                        <p class="success-message">Thanks <strong id="success-user-name">there</strong>! Your project scope has landed in my inbox. I'll review your notes and usually reply within 24 hours.</p>
+                        <h3 class="success-title">Message received.</h3>
+                        <p class="success-message">Thanks <strong id="success-user-name">there</strong>! Your note has landed in my inbox. I will review your details and reply within 24 hours.</p>
                         <button type="button" class="scope-reset-btn" id="scope-reset-btn">Send another note</button>
                     </div>
                 </div>
@@ -745,7 +851,7 @@
                     if (!isValid) return;
 
                     // Update hidden dynamic subject
-                    const emailSubject = `[Project Scope] ${projectTitle} from ${nameVal}`;
+                    const emailSubject = `[Inquiry] ${projectTitle} from ${nameVal}`;
                     if (hiddenSubject) hiddenSubject.value = emailSubject;
 
                     // Set loading state
