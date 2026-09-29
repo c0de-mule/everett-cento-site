@@ -1,5 +1,5 @@
 # Everett Cento
-> AI consultant based in Portland, Oregon, building custom AI systems and workflow automations for small businesses and solopreneurs, one-on-one.
+> Portland, Oregon based builder and editor. Builds custom AI systems and workflow automations for small businesses and solopreneurs (https://everettcento.com/ai/), and edits podcasts and video for small businesses and creators (https://everettcento.com/editing/).
 
 ## What he does
 - Custom AI systems and workflow automation fit to how your business already runs

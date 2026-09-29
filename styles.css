@@ -1662,6 +1662,120 @@ h1, h2, h3 {
 }
 
 /* ==========================================
+   Homepage Hub
+   ========================================== */
+
+.hero-cta-outline {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+/* Two routing buttons need to sit side by side in the half-width hero */
+.hero-actions-paths .hero-cta {
+    padding: var(--space-sm) 20px;
+}
+
+.paths {
+    padding: var(--space-2xl) 0;
+    background: var(--bg-secondary);
+    position: relative;
+    z-index: 10;
+}
+
+.paths .work-header h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+/* AI is the anchor: its card gets more room */
+.paths-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-lg);
+    align-items: stretch;
+}
+
+.path-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    background: var(--bg-primary);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 3px solid var(--text-muted);
+    border-radius: 4px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.path-card-primary {
+    border-top-color: var(--accent);
+}
+
+.path-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.path-label {
+    color: var(--accent);
+}
+
+.path-description {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    line-height: 1.35;
+    color: var(--text-primary);
+}
+
+.path-card:not(.path-card-primary) .path-description {
+    font-size: 1.3rem;
+}
+
+.path-start {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+}
+
+.path-start .label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.path-link {
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    transition: transform var(--transition);
+}
+
+.path-card:hover .path-link {
+    transform: translateX(3px);
+}
+
+.testimonials-light {
+    background: var(--bg-primary);
+}
+
+@media (max-width: 900px) {
+    .paths-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .path-card {
+        padding: var(--space-lg);
+    }
+
+    .path-description,
+    .path-card:not(.path-card-primary) .path-description {
+        font-size: 1.2rem;
+    }
+}
+
+/* ==========================================
    Editing Page
    ========================================== */
 
