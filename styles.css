@@ -1670,6 +1670,11 @@ h1, h2, h3 {
     color: var(--text-primary);
 }
 
+/* Candid color photo: skip the grayscale treatment used on the portrait */
+.hero-image-warm img {
+    filter: none;
+}
+
 /* Two routing buttons need to sit side by side in the half-width hero */
 .hero-actions-paths .hero-cta {
     padding: var(--space-sm) 20px;
