@@ -19,6 +19,13 @@
 - Custom Automations & Tools: Fixed-scope workflow automations, custom web tools, and data pipelines quoted per project.
 - Team Workshops: Custom live AI building workshops for teams, studios, and communities.
 
+## Video & Podcast Editing
+- Page: https://everettcento.com/editing/
+- Podcast (audio and video), YouTube, and short-form clip editing for small businesses and creators
+- Flat per-edit pricing: audio podcast from $50, video podcast from $90, YouTube video from $125, full episode production from $350
+- Three-business-day turnaround, two rounds of revisions
+- Edits Desires Laid Bare (Sasquatch Media Grounds), a weekly parenting podcast, and runs full production for a physician finance podcast
+
 ## Links
 - Site: https://everettcento.com
 - LinkedIn: https://www.linkedin.com/in/everett-cento/
