@@ -11,7 +11,8 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://everettcento.com/">
+    <link rel="canonical" href="https://everettcento.com/ai/">
+    <meta property="og:url" content="https://everettcento.com/ai/">
     <meta property="og:title" content="AI built around your business, not around a template.">
     <meta property="og:description" content="One-on-one AI for small businesses and solopreneurs. I learn how you operate, then build AI that fits.">
     <meta property="og:image" content="https://everettcento.com/everett-cento.png">
@@ -19,8 +20,8 @@
     <meta property="og:image:height" content="1000">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -48,9 +49,9 @@
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://everettcento.com/#service",
+          "@id": "https://everettcento.com/ai/#service",
           "name": "Everett Cento · Custom AI for Small Businesses",
-          "url": "https://everettcento.com/",
+          "url": "https://everettcento.com/ai/",
           "founder": { "@id": "https://everettcento.com/#everett" },
           "areaServed": [
             { "@type": "City", "name": "Portland" },
@@ -74,7 +75,7 @@
         },
         {
           "@type": "FAQPage",
-          "@id": "https://everettcento.com/#faq",
+          "@id": "https://everettcento.com/ai/#faq",
           "mainEntity": [
             { "@type": "Question", "name": "How does pricing and project scoping work?", "acceptedAnswer": { "@type": "Answer", "text": "The Business Brain is a flat $1,000 one-time build completed in one week. Fractional AI Lead engagements run as monthly retainers with dedicated automation sprints. Custom standalone projects are quoted as fixed-price bids after a short discovery call. There is no long enterprise contract and no per-seat software to buy on top." } },
             { "@type": "Question", "name": "Which service is the right fit for my business?", "acceptedAnswer": { "@type": "Answer", "text": "If you want your company voice, FAQs, and daily administrative writing organized into a private AI workspace within one week, start with The Business Brain ($1,000 flat fee). If you have multiple recurring manual handoffs, data pipelines, and internal tools you want automated every month, the Fractional AI Lead retainer provides dedicated ongoing operations support." } },
@@ -94,7 +95,7 @@
 
     <!-- Navigation -->
     <nav class="nav" aria-label="Main navigation">
-        <a href="#" class="nav-logo" aria-label="Everett Cento - Home">Everett Cento</a>
+        <a href="/" class="nav-logo" aria-label="Everett Cento - Home">Everett Cento</a>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#work">Projects</a>
@@ -117,7 +118,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="everett-cento.png" alt="Everett Cento" width="800" height="1000" loading="eager" fetchpriority="high" />
+                    <img src="/everett-cento.png" alt="Everett Cento" width="800" height="1000" loading="eager" fetchpriority="high" />
                 </div>
             </div>
         </section>
@@ -586,6 +587,16 @@
                     <span class="alt-divider" aria-hidden="true">·</span>
                     <a href="https://www.linkedin.com/in/everett-cento/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Everett on LinkedIn">LinkedIn</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- Cross-link to the editing side -->
+        <section class="cross-link" aria-label="Other work">
+            <div class="container">
+                <a href="/editing/" class="cross-link-inner">
+                    <span>I also edit video and podcasts for small businesses and creators.</span>
+                    <span class="cross-link-cta">See that side of my work <span aria-hidden="true">&rarr;</span></span>
+                </a>
             </div>
         </section>
     </main>
