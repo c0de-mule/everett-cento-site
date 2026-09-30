@@ -1686,9 +1686,9 @@ h1, h2, h3 {
     color: var(--text-primary);
 }
 
-/* Candid color photo: skip the grayscale treatment used on the portrait */
-.hero-image-warm img {
-    filter: none;
+/* Homepage headline is longer than the editing one, so give it more width */
+.hero-text-only.hero-home h1 {
+    max-width: 20ch;
 }
 
 /* Two routing buttons need to sit side by side in the half-width hero */
